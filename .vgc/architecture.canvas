@@ -1,0 +1,209 @@
+{
+  "vv": {
+    "name": "llama.cpp Architecture",
+    "version": "1.0.0",
+    "nodeTypes": {
+      "core": {
+        "label": "Core Engine",
+        "icon": "Cpu",
+        "color": "#FF6B6B"
+      },
+      "ggml": {
+        "label": "GGML Backend",
+        "icon": "Database",
+        "color": "#4ECDC4"
+      },
+      "models": {
+        "label": "Model Support",
+        "icon": "FileText",
+        "color": "#45B7D1"
+      },
+      "examples": {
+        "label": "Examples",
+        "icon": "Code",
+        "color": "#96CEB4"
+      },
+      "tests": {
+        "label": "Test Suite",
+        "icon": "CheckCircle",
+        "color": "#FFEAA7"
+      },
+      "tools": {
+        "label": "Tools",
+        "icon": "Wrench",
+        "color": "#DDA0DD"
+      },
+      "docs": {
+        "label": "Documentation",
+        "icon": "Book",
+        "color": "#98D8C8"
+      }
+    },
+    "edgeTypes": {
+      "depends": {
+        "label": "depends on",
+        "style": "solid",
+        "color": "#E74C3C"
+      },
+      "implements": {
+        "label": "implements",
+        "style": "solid",
+        "color": "#27AE60"
+      },
+      "uses": {
+        "label": "uses",
+        "style": "dashed",
+        "color": "#3498DB"
+      },
+      "tests": {
+        "label": "tests",
+        "style": "dotted",
+        "color": "#F39C12"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": "core",
+      "type": "text",
+      "x": 400,
+      "y": 200,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "core",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "ggml",
+      "type": "text",
+      "x": 313,
+      "y": 493,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "ggml",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "models",
+      "type": "text",
+      "x": 508,
+      "y": 489,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "models",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "examples",
+      "type": "text",
+      "x": 577,
+      "y": 49,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "examples",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "tests",
+      "type": "text",
+      "x": 217,
+      "y": 51,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "tests",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "tools",
+      "type": "text",
+      "x": 572,
+      "y": 348,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "tools",
+        "shape": "rectangle"
+      }
+    },
+    {
+      "id": "docs",
+      "type": "text",
+      "x": 400,
+      "y": 50,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "docs",
+        "shape": "rectangle"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "core-ggml",
+      "fromNode": "core",
+      "toNode": "ggml",
+      "vv": {
+        "edgeType": "depends"
+      }
+    },
+    {
+      "id": "core-models",
+      "fromNode": "core",
+      "toNode": "models",
+      "vv": {
+        "edgeType": "implements"
+      }
+    },
+    {
+      "id": "examples-core",
+      "fromNode": "examples",
+      "toNode": "core",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "tests-core",
+      "fromNode": "tests",
+      "toNode": "core",
+      "vv": {
+        "edgeType": "tests"
+      }
+    },
+    {
+      "id": "tests-ggml",
+      "fromNode": "tests",
+      "toNode": "ggml",
+      "vv": {
+        "edgeType": "tests"
+      }
+    },
+    {
+      "id": "tools-models",
+      "fromNode": "tools",
+      "toNode": "models",
+      "vv": {
+        "edgeType": "uses"
+      }
+    },
+    {
+      "id": "docs-core",
+      "fromNode": "docs",
+      "toNode": "core",
+      "vv": {
+        "edgeType": "depends"
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+version: "1.0.0"
+name: "llama.cpp Component Library"
+
+nodeComponents:
+  core:
+    label: "Core Engine"
+    icon: "Cpu"
+    color: 1
+    description: "Main inference engine and model loading"
+  ggml:
+    label: "GGML Backend"
+    icon: "Database"
+    color: 2
+    description: "Tensor operations and mathematical computations"
+  models:
+    label: "Model Support"
+    icon: "FileText"
+    color: 3
+    description: "Various model architectures and formats"
+  examples:
+    label: "Examples"
+    icon: "Code"
+    color: 4
+    description: "Sample applications and usage patterns"
+  tests:
+    label: "Test Suite"
+    icon: "CheckCircle"
+    color: 5
+    description: "Unit tests and integration tests"
+  tools:
+    label: "Tools"
+    icon: "Wrench"
+    color: 6
+    description: "Utility tools and converters"
+  docs:
+    label: "Documentation"
+    icon: "Book"
+    color: 1
+    description: "API documentation and guides"
+
+edgeComponents:
+  depends:
+    label: "depends on"
+    style: "solid"
+    color: 1
+  uses:
+    label: "uses"
+    style: "dashed"
+    color: 2
+  tests:
+    label: "tests"
+    style: "dotted"
+    color: 5
+  implements:
+    label: "implements"
+    style: "solid"
+    color: 4
