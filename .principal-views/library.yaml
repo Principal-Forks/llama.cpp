@@ -3,37 +3,37 @@ name: "llama.cpp Component Library"
 
 nodeComponents:
   core:
-    label: "Core Engine"
+    defaultLabel: "Core Engine"
     icon: "Cpu"
     color: 1
     description: "Main inference engine and model loading"
   ggml:
-    label: "GGML Backend"
+    defaultLabel: "GGML Backend"
     icon: "Database"
     color: 2
     description: "Tensor operations and mathematical computations"
   models:
-    label: "Model Support"
+    defaultLabel: "Model Support"
     icon: "FileText"
     color: 3
     description: "Various model architectures and formats"
   examples:
-    label: "Examples"
+    defaultLabel: "Examples"
     icon: "Code"
     color: 4
     description: "Sample applications and usage patterns"
   tests:
-    label: "Test Suite"
+    defaultLabel: "Test Suite"
     icon: "CheckCircle"
     color: 5
     description: "Unit tests and integration tests"
   tools:
-    label: "Tools"
+    defaultLabel: "Tools"
     icon: "Wrench"
     color: 6
     description: "Utility tools and converters"
   docs:
-    label: "Documentation"
+    defaultLabel: "Documentation"
     icon: "Book"
     color: 1
     description: "API documentation and guides"

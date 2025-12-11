@@ -1,5 +1,5 @@
 {
-  "vv": {
+  "pv": {
     "name": "llama.cpp Architecture",
     "version": "1.0.0",
     "nodeTypes": {
@@ -70,7 +70,7 @@
       "y": 200,
       "width": 120,
       "height": 60,
-      "vv": {
+      "pv": {
         "nodeType": "core",
         "shape": "rectangle"
       }
@@ -82,7 +82,7 @@
       "y": 493,
       "width": 120,
       "height": 60,
-      "vv": {
+      "pv": {
         "nodeType": "ggml",
         "shape": "rectangle"
       }
@@ -94,7 +94,7 @@
       "y": 489,
       "width": 120,
       "height": 60,
-      "vv": {
+      "pv": {
         "nodeType": "models",
         "shape": "rectangle"
       }
@@ -106,7 +106,7 @@
       "y": 49,
       "width": 120,
       "height": 60,
-      "vv": {
+      "pv": {
         "nodeType": "examples",
         "shape": "rectangle"
       }
@@ -118,7 +118,7 @@
       "y": 51,
       "width": 120,
       "height": 60,
-      "vv": {
+      "pv": {
         "nodeType": "tests",
         "shape": "rectangle"
       }
@@ -130,7 +130,7 @@
       "y": 348,
       "width": 120,
       "height": 60,
-      "vv": {
+      "pv": {
         "nodeType": "tools",
         "shape": "rectangle"
       }
@@ -142,7 +142,7 @@
       "y": 50,
       "width": 120,
       "height": 60,
-      "vv": {
+      "pv": {
         "nodeType": "docs",
         "shape": "rectangle"
       }
@@ -153,7 +153,7 @@
       "id": "core-ggml",
       "fromNode": "core",
       "toNode": "ggml",
-      "vv": {
+      "pv": {
         "edgeType": "depends"
       }
     },
@@ -161,7 +161,7 @@
       "id": "core-models",
       "fromNode": "core",
       "toNode": "models",
-      "vv": {
+      "pv": {
         "edgeType": "implements"
       }
     },
@@ -169,7 +169,7 @@
       "id": "examples-core",
       "fromNode": "examples",
       "toNode": "core",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -177,7 +177,7 @@
       "id": "tests-core",
       "fromNode": "tests",
       "toNode": "core",
-      "vv": {
+      "pv": {
         "edgeType": "tests"
       }
     },
@@ -185,7 +185,7 @@
       "id": "tests-ggml",
       "fromNode": "tests",
       "toNode": "ggml",
-      "vv": {
+      "pv": {
         "edgeType": "tests"
       }
     },
@@ -193,7 +193,7 @@
       "id": "tools-models",
       "fromNode": "tools",
       "toNode": "models",
-      "vv": {
+      "pv": {
         "edgeType": "uses"
       }
     },
@@ -201,7 +201,7 @@
       "id": "docs-core",
       "fromNode": "docs",
       "toNode": "core",
-      "vv": {
+      "pv": {
         "edgeType": "depends"
       }
     }
