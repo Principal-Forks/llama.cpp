@@ -70,6 +70,7 @@
       "y": 200,
       "width": 120,
       "height": 60,
+      "text": "Core Engine\nMain inference engine and model loader",
       "pv": {
         "nodeType": "core",
         "shape": "rectangle"
@@ -82,6 +83,7 @@
       "y": 493,
       "width": 120,
       "height": 60,
+      "text": "GGML Backend\nLow-level tensor operations",
       "pv": {
         "nodeType": "ggml",
         "shape": "rectangle"
@@ -94,6 +96,7 @@
       "y": 489,
       "width": 120,
       "height": 60,
+      "text": "Model Support\nVarious model architectures",
       "pv": {
         "nodeType": "models",
         "shape": "rectangle"
@@ -106,6 +109,7 @@
       "y": 49,
       "width": 120,
       "height": 60,
+      "text": "Examples\nUsage examples and demos",
       "pv": {
         "nodeType": "examples",
         "shape": "rectangle"
@@ -118,6 +122,7 @@
       "y": 51,
       "width": 120,
       "height": 60,
+      "text": "Test Suite\nUnit and integration tests",
       "pv": {
         "nodeType": "tests",
         "shape": "rectangle"
@@ -130,6 +135,7 @@
       "y": 348,
       "width": 120,
       "height": 60,
+      "text": "Tools\nModel conversion and utilities",
       "pv": {
         "nodeType": "tools",
         "shape": "rectangle"
@@ -142,6 +148,7 @@
       "y": 50,
       "width": 120,
       "height": 60,
+      "text": "Documentation\nAPI docs and guides",
       "pv": {
         "nodeType": "docs",
         "shape": "rectangle"
@@ -153,6 +160,8 @@
       "id": "core-ggml",
       "fromNode": "core",
       "toNode": "ggml",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "depends"
       }
@@ -161,6 +170,8 @@
       "id": "core-models",
       "fromNode": "core",
       "toNode": "models",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "implements"
       }
@@ -169,6 +180,8 @@
       "id": "examples-core",
       "fromNode": "examples",
       "toNode": "core",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "uses"
       }
@@ -177,6 +190,8 @@
       "id": "tests-core",
       "fromNode": "tests",
       "toNode": "core",
+      "fromSide": "bottom",
+      "toSide": "left",
       "pv": {
         "edgeType": "tests"
       }
@@ -185,6 +200,8 @@
       "id": "tests-ggml",
       "fromNode": "tests",
       "toNode": "ggml",
+      "fromSide": "right",
+      "toSide": "left",
       "pv": {
         "edgeType": "tests"
       }
@@ -193,6 +210,8 @@
       "id": "tools-models",
       "fromNode": "tools",
       "toNode": "models",
+      "fromSide": "left",
+      "toSide": "right",
       "pv": {
         "edgeType": "uses"
       }
@@ -201,6 +220,8 @@
       "id": "docs-core",
       "fromNode": "docs",
       "toNode": "core",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "depends"
       }
